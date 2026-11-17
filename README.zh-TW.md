@@ -110,6 +110,9 @@ npm run tauri build
 推送像 `v0.1.0` 這樣的 tag 時，GitHub Actions 也會自動打包三個平台的安裝檔，
 並附加到一個草稿 Release（見 `.github/workflows/release.yml`）。
 
+> 預先打包的 macOS 版本僅支援 **Apple Silicon**（M1 以後的機型）。Intel Mac 請用 `npm run tauri build` 自行打包，
+> 或直接使用 [網頁版](https://ya3978.github.io/quest-terminal/)。
+
 ### 部署網頁版
 
 `npm run build` 會在 `dist/` 產生純靜態網站，可以放到任何靜態主機。

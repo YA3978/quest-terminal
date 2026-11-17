@@ -1,4 +1,4 @@
-# Builds desktop installers for Windows, macOS (Apple Silicon + Intel) and Linux
+# Builds desktop installers for Windows, macOS (Apple Silicon) and Linux
 # when you push a version tag, e.g.:  git tag v0.1.0 && git push origin v0.1.0
 # The installers are attached to a DRAFT GitHub Release — review it, then publish.
 name: Release desktop app
@@ -21,8 +21,10 @@ jobs:
             args: ''
           - platform: macos-latest
             args: '--target aarch64-apple-darwin'
-          - platform: macos-latest
-            args: '--target x86_64-apple-darwin'
+          # Intel Macs: uncomment to also build an x86_64 installer (GitHub's macOS
+          # runners are sometimes short on capacity, so this job can queue for a long time).
+          # - platform: macos-latest
+          #   args: '--target x86_64-apple-darwin'
           - platform: ubuntu-22.04
             args: ''
     runs-on: ${{ matrix.platform }}
@@ -42,7 +44,7 @@ jobs:
 
       - uses: dtolnay/rust-toolchain@stable
         with:
-          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin,x86_64-apple-darwin' || '' }}
+          targets: ${{ matrix.platform == 'macos-latest' && 'aarch64-apple-darwin' || '' }}
 
       - uses: swatinem/rust-cache@v2
         with:

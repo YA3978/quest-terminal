@@ -114,6 +114,9 @@ The installers go to `src-tauri/target/release/bundle/`:
 Pushing a tag like `v0.1.0` also builds them for all three platforms in GitHub Actions,
 and attaches them to a draft release (see `.github/workflows/release.yml`).
 
+> The prebuilt macOS download is for **Apple Silicon** (M1 and later). On an Intel Mac, build it yourself
+> with `npm run tauri build`, or use the [web version](https://ya3978.github.io/quest-terminal/).
+
 ### Deploy the web version
 
 `npm run build` produces a static site in `dist/` that works on any static host. It uses
