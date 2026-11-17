@@ -4,13 +4,23 @@
 
 [English](./README.md) | **繁體中文**
 
+### ▶ [線上試玩](https://ya3978.github.io/quest-terminal/) · [下載桌面版](https://github.com/YA3978/quest-terminal/releases)
+
+試玩版直接在瀏覽器執行：不用安裝、不用註冊，資料只存在你自己的裝置上。
+
+![Quest Terminal：任務清單、子目標與結算獎勵（戰術特勤主題）](./docs/screenshots/tactical.jpg)
+
 Quest Terminal 是一個桌面／網頁應用程式，把你的待辦清單變成 **任務**：
 把大目標拆成一個個可以打勾的小目標，完成任務就能獲得 **經驗值（EXP）** 與 **貨幣**。
 經驗值讓角色升級，貨幣則可以在商店裡兌換 **你自己設定的現實獎勵**：一杯手搖飲、
 追一集劇、一小時遊戲時間…。這是為了對付拖延症而做的工具，也是讓「自我成長」變得像遊戲一樣，
 讓人想一直玩下去。
 
-<!-- 在這裡放截圖：docs/screenshot.png -->
+**同一個 App，任何遊戲風格。** 在個人檔案頁切換主題，或 [打造你自己的風格](./docs/THEMING.md)：
+
+| 冒險者公會（奇幻 RPG） | 賽博駭客（Cyberpunk） |
+|---|---|
+| ![奇幻主題](./docs/screenshots/fantasy.jpg) | ![賽博龐克主題](./docs/screenshots/cyberpunk.jpg) |
 
 ## 為什麼對拖延症有幫助？
 

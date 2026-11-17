@@ -4,13 +4,23 @@
 
 **English** | [繁體中文](./README.zh-TW.md)
 
+### ▶ [Play the live demo](https://ya3978.github.io/quest-terminal/) · [Download the desktop app](https://github.com/YA3978/quest-terminal/releases)
+
+The demo runs entirely in your browser. Nothing to install, no sign-up, and your data stays on your device.
+
+![Quest Terminal: mission board with objectives and rewards (Tactical theme)](./docs/screenshots/tactical.jpg)
+
 Quest Terminal is a desktop and web app that turns your to-do list into **missions**.
 You split a big goal into small objectives you can check off. Each finished mission pays
 **EXP** and **credits**: EXP levels up your character, and credits buy **real-life rewards**
 that you define yourself in the shop. It's built to fight procrastination, and to make
 self-improvement feel like a game you want to keep playing.
 
-<!-- Add a screenshot: docs/screenshot.png -->
+**One app, any game style.** Switch themes in the profile page, or [make your own](./docs/THEMING.md):
+
+| Adventurer's Guild (fantasy RPG) | Netrunner (cyberpunk) |
+|---|---|
+| ![Fantasy theme](./docs/screenshots/fantasy.jpg) | ![Cyberpunk theme](./docs/screenshots/cyberpunk.jpg) |
 
 ## Why it helps with procrastination
 
