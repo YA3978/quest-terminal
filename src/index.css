@@ -1,0 +1,208 @@
+@import 'tailwindcss';
+
+/*
+ * Theme bridge: ThemeProvider writes the active theme's values into the --c-* / --f-*
+ * variables on :root at runtime. These @theme entries turn them into Tailwind
+ * utilities, e.g. bg-panel, text-accent, border-line, font-display, rounded-theme.
+ * Opacity modifiers work too (bg-accent/15) via color-mix.
+ * Defaults below = the tactical theme, used before JS runs.
+ */
+:root {
+  --c-bg: #101921;
+  --c-panel: rgba(23, 36, 47, 0.92);
+  --c-panel2: #192733;
+  --c-card: #203242;
+  --c-card-hover: #294054;
+  --c-card-active: #234358;
+  --c-line: rgba(140, 185, 220, 0.14);
+  --c-accent: #00e599;
+  --c-accent-ink: #04100c;
+  --c-warn: #f59e0b;
+  --c-info: #38bdf8;
+  --c-danger: #ef4444;
+  --c-gold: #fbbf24;
+  --c-ink: #ffffff;
+  --c-text: #d1dde8;
+  --c-muted: #8298ad;
+  --c-dim: #5c7285;
+  --app-background: var(--c-bg);
+  --f-display: 'Chakra Petch', 'Noto Sans TC', sans-serif;
+  --f-mono: 'Rajdhani', monospace;
+  --f-body: 'Noto Sans TC', system-ui, sans-serif;
+  --radius: 2px;
+}
+
+@theme inline {
+  --color-bg: var(--c-bg);
+  --color-panel: var(--c-panel);
+  --color-panel2: var(--c-panel2);
+  --color-card: var(--c-card);
+  --color-card-hover: var(--c-card-hover);
+  --color-card-active: var(--c-card-active);
+  --color-line: var(--c-line);
+  --color-accent: var(--c-accent);
+  --color-accent-ink: var(--c-accent-ink);
+  --color-warn: var(--c-warn);
+  --color-info: var(--c-info);
+  --color-danger: var(--c-danger);
+  --color-gold: var(--c-gold);
+  --color-ink: var(--c-ink);
+  --color-text: var(--c-text);
+  --color-muted: var(--c-muted);
+  --color-dim: var(--c-dim);
+  --font-display: var(--f-display);
+  --font-mono: var(--f-mono);
+  --font-body: var(--f-body);
+  --radius-theme: var(--radius);
+}
+
+@layer base {
+  html,
+  body,
+  #root {
+    min-height: 100vh;
+  }
+  body {
+    background: var(--app-background);
+    background-attachment: fixed;
+    color: var(--c-text);
+    font-family: var(--f-body);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+  button {
+    cursor: pointer;
+  }
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: rgb(0 0 0 / 0.2);
+  }
+  ::-webkit-scrollbar-thumb {
+    background: color-mix(in srgb, var(--c-muted) 45%, transparent);
+    border-radius: 3px;
+  }
+}
+
+/* Small set of reusable component classes (everything else is utilities in JSX). */
+@layer components {
+  .icon {
+    width: 15px;
+    height: 15px;
+    stroke: currentColor;
+    stroke-width: 1.8;
+    fill: none;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    flex-shrink: 0;
+    display: inline-block;
+  }
+  .icon-lg {
+    width: 20px;
+    height: 20px;
+  }
+  .icon-xl {
+    width: 28px;
+    height: 28px;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-1.5 rounded-theme border border-transparent px-3.5 py-2 font-display text-[0.85rem] font-bold tracking-wide transition select-none disabled:cursor-not-allowed disabled:opacity-50;
+  }
+  .btn-primary {
+    @apply border-accent bg-accent text-accent-ink hover:brightness-110 hover:shadow-[0_0_15px_color-mix(in_srgb,var(--c-accent)_40%,transparent)];
+  }
+  .btn-outline {
+    @apply border-line bg-transparent text-text hover:border-accent hover:bg-white/5 hover:text-ink;
+  }
+  .btn-sm {
+    @apply px-2.5 py-1.5 text-[0.78rem];
+  }
+
+  .panel {
+    @apply rounded-[calc(var(--radius)*2)] border border-line bg-panel shadow-[0_12px_35px_-5px_rgb(0_0_0/0.55)];
+  }
+
+  .tag {
+    @apply inline-flex shrink-0 items-center gap-1 rounded-theme border px-1.5 py-0.5 font-display text-[0.68rem] font-bold tracking-wide whitespace-nowrap;
+  }
+  .tag-main {
+    @apply border-accent/35 bg-accent/15 text-accent;
+  }
+  .tag-side {
+    @apply border-warn/35 bg-warn/15 text-warn;
+  }
+  .tag-daily {
+    @apply border-info/35 bg-info/15 text-info;
+  }
+  .tag-bounty {
+    @apply border-line bg-muted/20 text-text;
+  }
+  .tag-done {
+    @apply border-muted/40 bg-muted/20 text-muted;
+  }
+
+  .field-label {
+    @apply font-display text-[0.8rem] font-semibold tracking-wide text-muted;
+  }
+  .form-control {
+    @apply w-full rounded-theme border border-line bg-card px-3 py-2 text-[0.88rem] text-ink transition outline-none focus:border-accent focus:shadow-[0_0_8px_color-mix(in_srgb,var(--c-accent)_20%,transparent)];
+  }
+
+  .section-title {
+    @apply flex items-center justify-between border-b border-line pb-2 font-display text-[0.95rem] font-bold tracking-wider text-ink;
+  }
+}
+
+@keyframes pulse-dot {
+  0%,
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+}
+@keyframes pulse-glow {
+  0%,
+  100% {
+    box-shadow: 0 0 15px color-mix(in srgb, var(--c-accent) 30%, transparent);
+  }
+  50% {
+    box-shadow: 0 0 30px color-mix(in srgb, var(--c-accent) 65%, transparent);
+  }
+}
+@keyframes toast-in {
+  from {
+    transform: translateY(24px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@utility animate-pulse-dot {
+  animation: pulse-dot 2s infinite ease-in-out;
+}
+@utility animate-pulse-glow {
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+@utility animate-toast-in {
+  animation: toast-in 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

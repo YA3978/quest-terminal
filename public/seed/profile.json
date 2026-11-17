@@ -1,0 +1,21 @@
+{
+  "callsign": "OPERATOR",
+  "level": 1,
+  "currentExp": 0,
+  "maxExp": 1000,
+  "credits": 0,
+  "streakDays": 0,
+  "lastActiveDate": null,
+  "lastDailyReset": null,
+  "totalCompletedTasks": 0,
+  "stats": {
+    "execution": 50,
+    "discipline": 50,
+    "knowledge": 50,
+    "vitality": 50
+  },
+  "achievements": [],
+  "history": [],
+  "theme": "tactical",
+  "sound": true
+}

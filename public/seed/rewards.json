@@ -1,0 +1,37 @@
+[
+  {
+    "id": "rew_drink",
+    "name": "一杯手搖飲或咖啡",
+    "desc": "完成任務後的小確幸",
+    "cost": 150,
+    "icon": "drink"
+  },
+  {
+    "id": "rew_episode",
+    "name": "追一集劇",
+    "desc": "無罪惡感地看一集喜歡的影集或動畫",
+    "cost": 200,
+    "icon": "film"
+  },
+  {
+    "id": "rew_game",
+    "name": "遊戲時間 1 小時",
+    "desc": "打開你最喜歡的遊戲，盡情玩一小時",
+    "cost": 300,
+    "icon": "game"
+  },
+  {
+    "id": "rew_feast",
+    "name": "吃一頓好料",
+    "desc": "去吃一直想吃的那家餐廳",
+    "cost": 800,
+    "icon": "feast"
+  },
+  {
+    "id": "rew_big",
+    "name": "購買想要很久的東西",
+    "desc": "長期累積的大獎勵（金額自己訂）",
+    "cost": 3000,
+    "icon": "gem"
+  }
+]

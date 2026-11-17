@@ -1,0 +1,242 @@
+[
+  {
+    "id": "group_learn_skill",
+    "isGroup": true,
+    "type": "main",
+    "title": "主線：30 天學會一項新技能",
+    "open": true,
+    "children": [
+      {
+        "id": "task_skill_pick",
+        "isGroup": false,
+        "type": "main",
+        "tagLabel": "主線任務",
+        "title": "第一階段：選定技能並擬定計畫",
+        "env": "個人成長戰區",
+        "goal": "決定要學什麼，並排出 30 天的練習計畫",
+        "intensity": "低強度，約 1 小時",
+        "briefing": "範例主線任務。把大目標拆成幾個階段，每個階段都是可以結算獎勵的任務。你可以編輯或刪除它。",
+        "exp": 300,
+        "credits": 80,
+        "statBoost": {
+          "knowledge": 2,
+          "execution": 1
+        },
+        "completed": false,
+        "completedAt": null,
+        "objectives": [
+          {
+            "id": "task_skill_pick_o1",
+            "text": "列出 3 個想學的技能並選定 1 個",
+            "done": false
+          },
+          {
+            "id": "task_skill_pick_o2",
+            "text": "找到 1 份入門教材或課程",
+            "done": false
+          },
+          {
+            "id": "task_skill_pick_o3",
+            "text": "在行事曆排好每週練習時段",
+            "done": false
+          }
+        ]
+      },
+      {
+        "id": "task_skill_week1",
+        "isGroup": false,
+        "type": "main",
+        "tagLabel": "主線任務",
+        "title": "第二階段：完成第一週練習",
+        "env": "個人成長戰區",
+        "goal": "累積第一週的練習量",
+        "intensity": "中強度，每天 30 分鐘",
+        "briefing": "持續比完美重要。今天只做 10 分鐘也算數。",
+        "exp": 400,
+        "credits": 100,
+        "statBoost": {
+          "knowledge": 2,
+          "discipline": 2
+        },
+        "completed": false,
+        "completedAt": null,
+        "objectives": [
+          {
+            "id": "task_skill_week1_o1",
+            "text": "練習 3 天以上",
+            "done": false
+          },
+          {
+            "id": "task_skill_week1_o2",
+            "text": "做一個小成果（筆記、作品或影片）",
+            "done": false
+          },
+          {
+            "id": "task_skill_week1_o3",
+            "text": "寫下這週卡住的地方",
+            "done": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "task_side_declutter",
+    "isGroup": false,
+    "type": "side",
+    "tagLabel": "支線任務",
+    "title": "整理書桌與數位桌面",
+    "env": "居家據點",
+    "goal": "打造一個不會讓人分心的工作環境",
+    "intensity": "低強度，約 45 分鐘",
+    "briefing": "環境會影響拖延。先清出一塊乾淨的桌面，再處理電腦桌面與下載資料夾。",
+    "exp": 200,
+    "credits": 50,
+    "statBoost": {
+      "execution": 1,
+      "discipline": 1
+    },
+    "completed": false,
+    "completedAt": null,
+    "objectives": [
+      {
+        "id": "task_side_declutter_o1",
+        "text": "清空桌面上不需要的東西",
+        "done": false
+      },
+      {
+        "id": "task_side_declutter_o2",
+        "text": "整理電腦桌面與下載資料夾",
+        "done": false
+      },
+      {
+        "id": "task_side_declutter_o3",
+        "text": "關掉 3 個不必要的通知",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": "task_daily_water",
+    "isGroup": false,
+    "type": "daily",
+    "tagLabel": "日常巡邏",
+    "title": "補水作業",
+    "env": "全天候",
+    "goal": "每天喝足 1500cc 的水",
+    "intensity": "低強度，分散在一天內完成",
+    "briefing": "日常任務每天會自動重置。建議分段補水：上午、下午、晚上各 500cc。",
+    "exp": 40,
+    "credits": 15,
+    "statBoost": {
+      "discipline": 1,
+      "vitality": 1
+    },
+    "completed": false,
+    "completedAt": null,
+    "objectives": [
+      {
+        "id": "task_daily_water_o1",
+        "text": "上午補水 500cc",
+        "done": false
+      },
+      {
+        "id": "task_daily_water_o2",
+        "text": "下午補水 500cc",
+        "done": false
+      },
+      {
+        "id": "task_daily_water_o3",
+        "text": "晚上補水 500cc",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": "task_daily_walk",
+    "isGroup": false,
+    "type": "daily",
+    "tagLabel": "日常巡邏",
+    "title": "戶外巡邏 15 分鐘",
+    "env": "附近公園或街區",
+    "goal": "每天到戶外走 15 分鐘",
+    "intensity": "低強度，步行即可",
+    "briefing": "離開螢幕、曬點太陽，讓腦袋重新開機。",
+    "exp": 40,
+    "credits": 15,
+    "statBoost": {
+      "discipline": 1,
+      "vitality": 1
+    },
+    "completed": false,
+    "completedAt": null,
+    "objectives": [
+      {
+        "id": "task_daily_walk_o1",
+        "text": "出門",
+        "done": false
+      },
+      {
+        "id": "task_daily_walk_o2",
+        "text": "持續步行 15 分鐘",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": "task_daily_focus",
+    "isGroup": false,
+    "type": "daily",
+    "tagLabel": "日常巡邏",
+    "title": "25 分鐘專注衝刺",
+    "env": "工作站",
+    "goal": "完成一個番茄鐘（25 分鐘不分心）",
+    "intensity": "中強度",
+    "briefing": "最難的是開始。先只承諾 25 分鐘，手機放到另一個房間。",
+    "exp": 50,
+    "credits": 20,
+    "statBoost": {
+      "discipline": 1,
+      "execution": 1
+    },
+    "completed": false,
+    "completedAt": null,
+    "objectives": [
+      {
+        "id": "task_daily_focus_o1",
+        "text": "手機靜音並移開",
+        "done": false
+      },
+      {
+        "id": "task_daily_focus_o2",
+        "text": "專注 25 分鐘完成一件事",
+        "done": false
+      }
+    ]
+  },
+  {
+    "id": "task_bounty_bill",
+    "isGroup": false,
+    "type": "bounty",
+    "tagLabel": "小任務",
+    "title": "繳交本月帳單",
+    "env": "線上",
+    "goal": "把拖了好幾天的帳單繳掉",
+    "intensity": "極低強度，5 分鐘",
+    "briefing": "這種 5 分鐘就能完成的小事最容易拖延，也最值得馬上清掉。",
+    "exp": 60,
+    "credits": 20,
+    "statBoost": {
+      "execution": 1
+    },
+    "completed": false,
+    "completedAt": null,
+    "objectives": [
+      {
+        "id": "task_bounty_bill_o1",
+        "text": "登入網銀或繳費 App 完成繳費",
+        "done": false
+      }
+    ]
+  }
+]
